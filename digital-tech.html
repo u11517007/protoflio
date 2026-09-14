@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>數位科技概論作業 - 詳細內容</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; background: #f4f4f9; }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-btn:hover { text-decoration: underline; }
+        .container { background: white; padding: 35px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; margin-top: 0; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #3498db; margin-top: 25px; }
+        
+        /* 表格樣式 */
+        .detail-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .detail-table th, .detail-table td {
+            border: 1px solid #e0e0e0;
+            padding: 12px;
+            text-align: left;
+            font-size: 0.9em;
+        }
+        .detail-table th { background: #f0f4f8; color: #2c3e50; }
+        .activity-tag {
+            background: #eef2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.85em;
+        }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- 返回首頁連結 -->
+    <a href="index.html" class="back-btn">← 返回作品集首頁</a>
+
+    <div class="container">
+        <h1>《數位科技概論》第二週教學講義與活動總覽</h1>
+        <p>本週課程包含 9 個核心學習活動，涵蓋 GitHub 操作、HTML 結構化與 CSS 網頁佈局設計[cite: 1]。</p>
+
+        <h2>活動學習主題明細</h2>
+        <table class="detail-table">
+            <thead>
+                <tr>
+                    <th>活動主題</th>
+                    <th>核心檔案</th>
+                    <th>學習重點與技巧</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>01：把小站變成我的</strong></td>
+                    <td><span class="activity-tag">01-html-text.html</span></td>
+                    <td>HTML 文字層級 (`&lt;h1&gt;`–`&lt;h3&gt;`) 與標籤屬性 (`&lt;b&gt;`, `&lt;i&gt;`)[cite: 1]</td>
+                </tr>
+                <tr>
+                    <td><strong>02：讓小站有聲有影</strong></td>
+                    <td><span class="activity-tag">02-html-media.html</span></td>
+                    <td>多媒體元素 (`&lt;img&gt;`, `&lt;audio&gt;`, `&lt;video&gt;`) 與圖片 `alt` 設定[cite: 1]</td>
+                </tr>
+                <tr>
+                    <td><strong>03：整理我的學習計畫</strong></td>
+                    <td><span class="activity-tag">03-html-plan.html</span></td>
+                    <td>清單 (`&lt;ul&gt;`/`&lt;ol&gt;`) 與表格結構 (`&lt;table&gt;`, `&lt;tr&gt;`, `&lt;td&gt;`)[cite: 1]</td>
+                </tr>
+                <tr>
+                    <td><strong>04：設計一張活動報名表</strong></td>
+                    <td><span class="activity-tag">04-html-form.html</span></td>
+                    <td>表單元件 (`&lt;input&gt;`, `&lt;select&gt;`, `&lt;textarea&gt;`) 與 `label` 關聯[cite: 1]</td>
+                </tr>
+                <tr>
+                    <td><strong>05：換一種風格</strong></td>
+                    <td><span class="activity-tag">05-css-style.html</span></td>
+                    <td>CSS 色彩、Box Model 內外距 (`padding`/`margin`) 設定[cite: 1]</td>
+                </tr>
+                <tr>
+                    <td><strong>06：網頁版型佈局</strong></td>
+                    <td><span class="activity-tag">06-css-layout.html</span></td>
+                    <td>網頁多欄位佈局與 CSS Grid 基本應用[cite: 1]</td>
+                </tr>
+                <tr>
+                    <td><strong>07：把內容排得整齊</strong></td>
+                    <td><span class="activity-tag">07-css-cards.html</span></td>
+                    <td>Flexbox 卡片排列與 `object-fit` 圖片裁切[cite: 1]</td>
+                </tr>
+                <tr>
+                    <td><strong>08：從電腦版變成手機版</strong></td>
+                    <td><span class="activity-tag">08-css-rwd.html</span></td>
+                    <td>響應式網頁設計 (RWD) 與 `@media` 媒體查詢[cite: 1]</td>
+                </tr>
+                <tr>
+                    <td><strong>09：修正無障礙機檢</strong></td>
+                    <td><span class="activity-tag">09-css-accessibility.html</span></td>
+                    <td>WAVE 無障礙檢測、高色彩對比度與 `:focus-visible` 鍵盤焦點[cite: 1]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>作業打包與繳交規範</h2>
+        <ul>
+            <li><strong>HTML 單獨作業 (01, 03, 04)：</strong>繳交單一 HTML 檔 (`0X-html-xxx-學號.html`)[cite: 1]。</li>
+            <li><strong>多媒體作業 (02)：</strong>需連同 <span class="activity-tag">media-02</span> 資料夾打包為 ZIP (`02-html-media-學號.zip`)[cite: 1]。</li>
+            <li><strong>CSS 作業 (05–09)：</strong>挑選其中 1 個案例修改，打包為 <span class="activity-tag">CSS-活動編號-學號.zip</span>[cite: 1]。</li>
+        </ul>
+    </div>
+
+</body>
+</html>

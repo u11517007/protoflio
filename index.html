@@ -11,6 +11,38 @@
         .section { background: white; margin-top: 20px; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         h2 { border-bottom: 2px solid #3498db; padding-bottom: 5px; color: #3498db; }
         ul { padding-left: 20px; }
+
+        /* 超連結卡片樣式 */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            margin-top: 15px;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(52, 152, 219, 0.15);
+            border-color: #3498db;
+        }
+        .card h3 { margin: 0 0 8px 0; color: #2c3e50; }
+        .card p { margin: 0; color: #666; font-size: 0.9em; }
+        .card-arrow {
+            color: #3498db;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-left: 15px;
+        }
     </style>
 </head>
 <body>
@@ -25,6 +57,21 @@
         <p>這是我在大一建立的個人作品集網站雛型。目前正在學習基礎程式設計與網頁開發，目標在大學四年內累積豐富的專案經驗！</p>
     </div>
 
+    <!-- 課程作品集區塊 -->
+    <div class="section">
+        <h2>課程作品集</h2>
+        <!-- 點擊卡片跳轉至 digital-tech.html -->
+        <a href="digital-tech.html" class="card-link">
+            <div class="card">
+                <div>
+                    <h3>數位科技概論作業</h3>
+                    <p>點擊進入查看第二週完整的 HTML 與 CSS 學習紀錄與活動總覽。</p>
+                </div>
+                <div class="card-arrow">➔</div>
+            </div>
+        </a>
+    </div>
+
     <div class="section">
         <h2>目前經歷與技能</h2>
         <ul>
@@ -36,7 +83,7 @@
 
     <div class="section">
         <h2>聯絡方式</h2>
-        <p>Email:你的信箱@example.com</p>
+        <p>Email: 你的信箱@example.com</p>
         <p>GitHub: <a href="https://github.com/">你的GitHub帳號</a></p>
     </div>
 
