@@ -46,7 +46,7 @@
         }
         ul { padding-left: 20px; }
 
-        /* 作業 01 展開夾層樣式 */
+        /* 作業展開夾層樣式 */
         details.work-accordion {
             background: #fafafa;
             border: 1px solid #dcdfe6;
@@ -91,15 +91,14 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- 第一個夾層/項目修改點 -->
                 <tr>
                     <td><strong>01：把小站變成我的（水與生活）</strong></td>
                     <td><a href="01-html-11517007.html" class="activity-tag">01-html-11517007.html</a></td>
-                    <td>HTML 文字標籤 (`&lt;h1&gt;`–`&lt;h2&gt;`) 與特殊格式 (`&lt;sub&gt;`, `&lt;sup&gt;`)[cite: 1]</td>
+                    <td>HTML 文字層級 (`&lt;h1&gt;`–`&lt;h3&gt;`) 與標籤屬性 (`&lt;b&gt;`, `&lt;i&gt;`, `&lt;sub&gt;`, `&lt;sup&gt;`)[cite: 1]</td>
                 </tr>
                 <tr>
-                    <td><strong>02：讓小站有聲有影</strong></td>
-                    <td><span class="activity-tag">02-html-media.html</span></td>
+                    <td><strong>02：讓小站有聲有影（校園自然觀察）</strong></td>
+                    <td><a href="02-html-media-11517007.html" class="activity-tag">02-html-media-11517007.html</a></td>
                     <td>多媒體元素 (`&lt;img&gt;`, `&lt;audio&gt;`, `&lt;video&gt;`) 與圖片 `alt` 設定[cite: 1]</td>
                 </tr>
                 <tr>
@@ -140,9 +139,11 @@
             </tbody>
         </table>
 
-        <!-- 第一個作業 (01) 內容內嵌夾層展覽區 -->
-        <h2>作業 01 內容預覽</h2>
-        <details class="work-accordion" open>
+        <!-- 作業內容預覽與夾層展覽區 -->
+        <h2>作業內容預覽</h2>
+
+        <!-- 作業 01 夾層 -->
+        <details class="work-accordion">
             <summary>📁 作業 01：水與生活：小小科學探索日（點擊展開/收合）</summary>
             <div class="work-content">
                 <h3>水與生活：小小科學探索日</h3>
@@ -161,6 +162,53 @@
                 <p>請自備水壺，並準備一本觀察筆記。</p>
                 <p>今天的探索口號是：先觀察，再提問！</p>
                 <p>我們將使用面積為 100 cm<sup>2</sup> 的方形觀察卡。</p>
+            </div>
+        </details>
+
+        <!-- 作業 02 夾層 -->
+        <details class="work-accordion" open>
+            <summary>📁 作業 02：校園自然觀察任務卡（點擊展開/收合）</summary>
+            <div class="work-content">
+                <h3>校園自然觀察任務卡</h3>
+                <p>今天我們用眼睛觀察，也用文字記錄發現。</p>
+
+                <h4>任務一：看看葉脈</h4>
+                <p>觀察葉片圖片，找出葉脈延伸的方向。</p>
+                <img src="media-02/leaf-photo.png" width="240" alt="葉片的葉脈構造圖片">
+
+                <h4>任務二：準備開始</h4>
+                <p>按下播放，聽到三個由低到高的短音後，開始你的觀察。</p>
+                <audio src="media-02/notice.wav" controls>
+                    您的瀏覽器不支援音訊播放。
+                </audio>
+
+                <h4>任務三：觀察花朵</h4>
+                <p>播放短片，看看花朵怎麼移動，再用一句話描述。</p>
+                <p>（短片內容說明：畫面展現花朵在微風中輕柔擺動與綻放的過程。）</p>
+                <video src="media-02/flower.mp4" width="300" controls>
+                    您的瀏覽器不支援影片播放。
+                </video>
+
+                <h4>透明圖片展覽區</h4>
+                <img src="media-02/flower-transparent.png" alt="透明背景的花朵去背圖片">
+
+                <!-- 補齊：船長的一週行事曆區塊 -->
+                <h4>船長的一週行事曆</h4>
+                <img src="media-02/captain-calendar.svg" alt="船長的一週行事曆 SVG 圖片" width="350">
+                <ul>
+                    <li>星期一：出航巡視</li>
+                    <li>星期二：補給物資</li>
+                    <li>星期三：保養船隻</li>
+                    <li>星期四：航海圖繪製</li>
+                    <li>星期五：團隊會議</li>
+                    <li>星期六、日：港口休整</li>
+                </ul>
+
+                <h4>素材來源</h4>
+                <p>本頁面使用之多媒體素材來源連結：</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video" target="_blank" rel="noopener noreferrer">MDN 影片範例說明</a></li>
+                </ul>
             </div>
         </details>
 

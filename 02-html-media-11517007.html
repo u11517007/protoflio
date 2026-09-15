@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 第 1 點：網頁分頁名稱使用「校園自然觀察任務卡」 -->
+    <title>校園自然觀察任務卡</title>
+</head>
+<body>
+
+    <!-- 第 1 點：整頁 h1 使用「校園自然觀察任務卡」 -->
+    <h1>校園自然觀察任務卡</h1>
+    <p>今天我們用眼睛觀察，也用文字記錄發現。</p>
+
+    <!-- 第 1 點：三個任務使用 h2，說明句使用 p -->
+    <!-- 第 2 點：任務一使用 media-02/leaf-photo.png，寬度設為 240，提供符合圖片內容的 alt -->
+    <h2>任務一：看看葉脈</h2>
+    <p>觀察葉片圖片，找出葉脈延伸的方向。</p>
+    <img src="media-02/leaf-photo.png" width="240" alt="葉片的葉脈構造圖片">
+
+    <!-- 第 3 點：任務二使用 media-02/notice.wav，顯示控制列，保留聲音的文字說明 -->
+    <!-- 第 5 點：由使用者按播放，不加 autoplay 或 loop -->
+    <h2>任務二：準備開始</h2>
+    <p>按下播放，聽到三個由低到高的短音後，開始你的觀察。</p>
+    <audio src="media-02/notice.wav" controls>
+        您的瀏覽器不支援音訊播放。
+    </audio>
+
+    <!-- 第 4 點：任務三使用 media-02/flower.mp4，寬度設為 300，顯示控制列。保留觀察文字，補上一句短片內容說明 -->
+    <!-- 第 5 點：由使用者按播放，不加 autoplay 或 loop -->
+    <h2>任務三：觀察花朵</h2>
+    <p>播放短片，看看花朵怎麼移動，再用一句話描述。</p>
+    <p>（短片內容說明：畫面展現花朵在微風中輕柔擺動與綻放的過程。）</p>
+    <video src="media-02/flower.mp4" width="300" controls>
+        您的瀏覽器不支援影片播放。
+    </video>
+
+    <!-- 第 6 點：保留並完成透明圖片區塊：使用 flower-transparent.png，提供合適的替代文字 -->
+    <section>
+        <h2>透明圖片展覽區</h2>
+        <img src="media-02/flower-transparent.png" alt="透明背景的花朵去背圖片">
+    </section>
+
+    <!-- 第 7 點：保留「船長的一週行事曆」SVG 與下方文字版行程，作為圖片格式展示 -->
+    <section>
+        <h2>船長的一週行事曆</h2>
+        <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="100" fill="#f0f0f0" />
+            <text x="20" y="55" font-size="16" fill="#333">船長的一週行事曆 SVG</text>
+        </svg>
+        <ul>
+            <li>星期一：出航巡視</li>
+            <li>星期二：補給物資</li>
+            <li>星期三：保養船隻</li>
+            <li>星期四：航海圖繪製</li>
+            <li>星期五：團隊會議</li>
+            <li>星期六、日：港口休整</li>
+        </ul>
+    </section>
+
+    <!-- 第 8 點：保留素材來源段落與連結 -->
+    <section>
+        <h2>素材來源</h2>
+        <p>本頁面使用之多媒體素材來源連結：</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video" target="_blank" rel="noopener noreferrer">MDN 影片範例說明</a></li>
+        </ul>
+    </section>
+
+</body>
+</html>
