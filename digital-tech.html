@@ -37,8 +37,39 @@
             border-radius: 4px;
             font-family: monospace;
             font-size: 0.85em;
+            color: #2980b9;
+            text-decoration: none;
+        }
+        .activity-tag:hover {
+            background: #3498db;
+            color: #ffffff;
         }
         ul { padding-left: 20px; }
+
+        /* 作業 01 展開夾層樣式 */
+        details.work-accordion {
+            background: #fafafa;
+            border: 1px solid #dcdfe6;
+            border-radius: 6px;
+            margin-top: 15px;
+            padding: 10px 15px;
+        }
+        details.work-accordion summary {
+            font-weight: bold;
+            color: #2c3e50;
+            cursor: pointer;
+            padding: 5px 0;
+        }
+        .work-content {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #ccc;
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .work-content h3 { margin-top: 0; color: #2c3e50; }
+        .work-content h4 { color: #3498db; margin-bottom: 5px; }
     </style>
 </head>
 <body>
@@ -60,10 +91,11 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- 第一個夾層/項目修改點 -->
                 <tr>
-                    <td><strong>01：把小站變成我的</strong></td>
-                    <td><span class="activity-tag">01-html-text.html</span></td>
-                    <td>HTML 文字層級 (`&lt;h1&gt;`–`&lt;h3&gt;`) 與標籤屬性 (`&lt;b&gt;`, `&lt;i&gt;`)[cite: 1]</td>
+                    <td><strong>01：把小站變成我的（水與生活）</strong></td>
+                    <td><a href="01-html-11517007.html" class="activity-tag">01-html-11517007.html</a></td>
+                    <td>HTML 文字標籤 (`&lt;h1&gt;`–`&lt;h2&gt;`) 與特殊格式 (`&lt;sub&gt;`, `&lt;sup&gt;`)[cite: 1]</td>
                 </tr>
                 <tr>
                     <td><strong>02：讓小站有聲有影</strong></td>
@@ -107,6 +139,30 @@
                 </tr>
             </tbody>
         </table>
+
+        <!-- 第一個作業 (01) 內容內嵌夾層展覽區 -->
+        <h2>作業 01 內容預覽</h2>
+        <details class="work-accordion" open>
+            <summary>📁 作業 01：水與生活：小小科學探索日（點擊展開/收合）</summary>
+            <div class="work-content">
+                <h3>水與生活：小小科學探索日</h3>
+                <p>一起從生活中的水，發現科學的有趣之處。</p>
+
+                <h4>活動介紹</h4>
+                <p>這次活動適合國小中年級學生，請帶著好奇心一起參加。</p>
+
+                <h4>觀察水的樣子</h4>
+                <p>看看不同容器中的水，試著說出你觀察到的變化。</p>
+
+                <h4>認識水的名字</h4>
+                <p>水的化學式是 H<sub>2</sub>O。</p>
+
+                <h4>參加前的小提醒</h4>
+                <p>請自備水壺，並準備一本觀察筆記。</p>
+                <p>今天的探索口號是：先觀察，再提問！</p>
+                <p>我們將使用面積為 100 cm<sup>2</sup> 的方形觀察卡。</p>
+            </div>
+        </details>
 
         <h2>作業打包與繳交規範</h2>
         <ul>
