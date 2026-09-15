@@ -44,7 +44,26 @@
             background: #3498db;
             color: #ffffff;
         }
-        ul { padding-left: 20px; }
+        ul, ol { padding-left: 20px; }
+
+        /* 作業內容裡面的表格樣式 */
+        .work-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .work-table th, .work-table td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .work-table th { background-color: #f4f4f4; }
+        .work-table caption {
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-align: left;
+            color: #2c3e50;
+        }
 
         /* 作業展開夾層樣式 */
         details.work-accordion {
@@ -79,7 +98,7 @@
 
     <div class="container">
         <h1>《數位科技概論》第二週教學講義與活動總覽</h1>
-        <p>本週課程包含 9 個核心學習活動，涵蓋 GitHub 操作、HTML 結構化與 CSS 網頁佈局設計[cite: 1]。</p>
+        <p>本週課程包含 9 個核心學習活動，涵蓋 GitHub 操作、HTML 結構化與 CSS 網頁佈局設計。</p>
 
         <h2>活動學習主題明細</h2>
         <table class="detail-table">
@@ -94,47 +113,47 @@
                 <tr>
                     <td><strong>01：把小站變成我的（水與生活）</strong></td>
                     <td><a href="01-html-11517007.html" class="activity-tag">01-html-11517007.html</a></td>
-                    <td>HTML 文字層級 (`&lt;h1&gt;`–`&lt;h3&gt;`) 與標籤屬性 (`&lt;b&gt;`, `&lt;i&gt;`, `&lt;sub&gt;`, `&lt;sup&gt;`)[cite: 1]</td>
+                    <td>HTML 文字層級 (`&lt;h1&gt;`–`&lt;h3&gt;`) 與標籤屬性 (`&lt;b&gt;`, `&lt;i&gt;`, `&lt;sub&gt;`, `&lt;sup&gt;`)</td>
                 </tr>
                 <tr>
                     <td><strong>02：讓小站有聲有影（校園自然觀察）</strong></td>
                     <td><a href="02-html-media-11517007.html" class="activity-tag">02-html-media-11517007.html</a></td>
-                    <td>多媒體元素 (`&lt;img&gt;`, `&lt;audio&gt;`, `&lt;video&gt;`) 與圖片 `alt` 設定[cite: 1]</td>
+                    <td>多媒體元素 (`&lt;img&gt;`, `&lt;audio&gt;`, `&lt;video&gt;`) 與圖片 `alt` 設定</td>
                 </tr>
                 <tr>
-                    <td><strong>03：整理我的學習計畫</strong></td>
-                    <td><span class="activity-tag">03-html-plan.html</span></td>
-                    <td>清單 (`&lt;ul&gt;`/`&lt;ol&gt;`) 與表格結構 (`&lt;table&gt;`, `&lt;tr&gt;`, `&lt;td&gt;`)[cite: 1]</td>
+                    <td><strong>03：整理我的學習計畫（紙橋挑戰社）</strong></td>
+                    <td><a href="03-html-plan-11517007.html" class="activity-tag">03-html-plan-11517007.html</a></td>
+                    <td>清單 (`&lt;ul&gt;`/`&lt;ol&gt;`) 與表格結構 (`&lt;table&gt;`, `&lt;tr&gt;`, `&lt;td&gt;`)</td>
                 </tr>
                 <tr>
                     <td><strong>04：設計一張活動報名表</strong></td>
                     <td><span class="activity-tag">04-html-form.html</span></td>
-                    <td>表單元件 (`&lt;input&gt;`, `&lt;select&gt;`, `&lt;textarea&gt;`) 與 `label` 關聯[cite: 1]</td>
+                    <td>表單元件 (`&lt;input&gt;`, `&lt;select&gt;`, `&lt;textarea&gt;`) 與 `label` 關聯</td>
                 </tr>
                 <tr>
                     <td><strong>05：換一種風格</strong></td>
                     <td><span class="activity-tag">05-css-style.html</span></td>
-                    <td>CSS 色彩、Box Model 內外距 (`padding`/`margin`) 設定[cite: 1]</td>
+                    <td>CSS 色彩、Box Model 內外距 (`padding`/`margin`) 設定</td>
                 </tr>
                 <tr>
                     <td><strong>06：網頁版型佈局</strong></td>
                     <td><span class="activity-tag">06-css-layout.html</span></td>
-                    <td>網頁多欄位佈局與 CSS Grid 基本應用[cite: 1]</td>
+                    <td>網頁多欄位佈局與 CSS Grid 基本應用</td>
                 </tr>
                 <tr>
                     <td><strong>07：把內容排得整齊</strong></td>
                     <td><span class="activity-tag">07-css-cards.html</span></td>
-                    <td>Flexbox 卡片排列與 `object-fit` 圖片裁切[cite: 1]</td>
+                    <td>Flexbox 卡片排列與 `object-fit` 圖片裁切</td>
                 </tr>
                 <tr>
                     <td><strong>08：從電腦版變成手機版</strong></td>
                     <td><span class="activity-tag">08-css-rwd.html</span></td>
-                    <td>響應式網頁設計 (RWD) 與 `@media` 媒體查詢[cite: 1]</td>
+                    <td>響應式網頁設計 (RWD) 與 `@media` 媒體查詢</td>
                 </tr>
                 <tr>
                     <td><strong>09：修正無障礙機檢</strong></td>
                     <td><span class="activity-tag">09-css-accessibility.html</span></td>
-                    <td>WAVE 無障礙檢測、高色彩對比度與 `:focus-visible` 鍵盤焦點[cite: 1]</td>
+                    <td>WAVE 無障礙檢測、高色彩對比度與 `:focus-visible` 鍵盤焦點</td>
                 </tr>
             </tbody>
         </table>
@@ -166,7 +185,7 @@
         </details>
 
         <!-- 作業 02 夾層 -->
-        <details class="work-accordion" open>
+        <details class="work-accordion">
             <summary>📁 作業 02：校園自然觀察任務卡（點擊展開/收合）</summary>
             <div class="work-content">
                 <h3>校園自然觀察任務卡</h3>
@@ -192,7 +211,6 @@
                 <h4>透明圖片展覽區</h4>
                 <img src="media-02/flower-transparent.png" alt="透明背景的花朵去背圖片">
 
-                <!-- 補齊：船長的一週行事曆區塊 -->
                 <h4>船長的一週行事曆</h4>
                 <img src="media-02/captain-calendar.svg" alt="船長的一週行事曆 SVG 圖片" width="350">
                 <ul>
@@ -212,11 +230,69 @@
             </div>
         </details>
 
+        <!-- 作業 03 夾層 -->
+        <details class="work-accordion" open>
+            <summary>📁 作業 03：紙橋挑戰社：活動準備頁（點擊展開/收合）</summary>
+            <div class="work-content">
+                <h3>紙橋挑戰社：活動準備頁</h3>
+                <p>我們要用簡單的材料，設計一座能承重的紙橋。</p>
+
+                <h4>要帶的材料</h4>
+                <ul>
+                    <li>A4 紙 3 張</li>
+                    <li>膠帶 1 卷</li>
+                    <li>積木 10 個</li>
+                </ul>
+
+                <h4>挑戰步驟</h4>
+                <ol>
+                    <li>先畫出紙橋草圖</li>
+                    <li>再折出橋面並固定</li>
+                    <li>逐一放上積木，觀察能承受的重量</li>
+                    <li>記錄結果，討論如何改進</li>
+                </ol>
+
+                <h4>小組分工</h4>
+                <table class="work-table">
+                    <caption>小組任務分工表</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">角色</th>
+                            <th scope="col">負責工作</th>
+                            <th scope="col">預計成果</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>設計員</td>
+                            <td>畫出紙橋草圖</td>
+                            <td>一張草圖</td>
+                        </tr>
+                        <tr>
+                            <td>製作員</td>
+                            <td>依照草圖組裝</td>
+                            <td>一座紙橋</td>
+                        </tr>
+                        <tr>
+                            <td>紀錄員</td>
+                            <td>記錄測試結果</td>
+                            <td>一份測試紀錄</td>
+                        </tr>
+                        <tr>
+                            <td>測試員</td>
+                            <td>操作放置積木並監控結構狀況</td>
+                            <td>承重極限數據</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
         <h2>作業打包與繳交規範</h2>
         <ul>
-            <li><strong>HTML 單獨作業 (01, 03, 04)：</strong>繳交單一 HTML 檔 (`0X-html-xxx-學號.html`)[cite: 1]。</li>
-            <li><strong>多媒體作業 (02)：</strong>需連同 <span class="activity-tag">media-02</span> 資料夾打包為 ZIP (`02-html-media-學號.zip`)[cite: 1]。</li>
-            <li><strong>CSS 作業 (05–09)：</strong>挑選其中 1 個案例修改，打包為 <span class="activity-tag">CSS-活動編號-學號.zip</span>[cite: 1]。</li>
+            <li><strong>HTML 單獨作業 (01, 03, 04)：</strong>繳交單一 HTML 檔 (`0X-html-xxx-學號.html`)。</li>
+            <li><strong>多媒體作業 (02)：</strong>需連同 <span class="activity-tag">media-02</span> 資料夾打包為 ZIP (`02-html-media-學號.zip`)。</li>
+            <li><strong>CSS 作業 (05–09)：</strong>挑選其中 1 個案例修改，打包為 <span class="activity-tag">CSS-活動編號-學號.zip</span>。</li>
         </ul>
     </div>
 
