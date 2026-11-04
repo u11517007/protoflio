@@ -1,225 +1,417 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>數位科技概論作業 - 詳細內容</title>
-    <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; background: #f4f4f9; }
-        .back-btn {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .back-btn:hover { text-decoration: underline; }
-        .container { background: white; padding: 35px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; margin-top: 0; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        h2 { color: #3498db; margin-top: 25px; }
-        
-        /* 表格樣式 */
-        .detail-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        .detail-table th, .detail-table td {
-            border: 1px solid #e0e0e0;
-            padding: 12px;
-            text-align: left;
-            font-size: 0.9em;
-        }
-        .detail-table th { background: #f0f4f8; color: #2c3e50; }
-        .activity-tag {
-            background: #eef2f7;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-            font-size: 0.85em;
-            color: #2980b9;
-            text-decoration: none;
-        }
-        .activity-tag:hover {
-            background: #3498db;
-            color: #ffffff;
-        }
-        ul, ol { padding-left: 20px; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>數位科技概論作業總覽 - 陳采穎</title>
+  <style>
+    /* 全域基礎樣式 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f8fafc;
+      color: #2d3748;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 24px;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 16px;
+      color: #3182ce;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      color: #2b6cb0;
+      margin-bottom: 8px;
+    }
+    header p {
+      color: #4a5568;
+    }
 
-        /* 作業內容裡面的表格樣式 */
-        .work-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        .work-table th, .work-table td {
-            border: 1px solid #ccc;
-            padding: 8px 12px;
-            text-align: left;
-        }
-        .work-table th { background-color: #f4f4f4; }
+    /* 通用外層大摺疊卡片 */
+    .main-collapse-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    .main-collapse-card > details > summary {
+      padding: 18px 24px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #3182ce;
+      cursor: pointer;
+      user-select: none;
+      background-color: #ffffff;
+      transition: background-color 0.2s;
+    }
+    .main-collapse-card > details > summary:hover {
+      background-color: #f7fafc;
+    }
+    .main-collapse-content {
+      padding: 20px 24px;
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+    }
 
-        /* 作業展開夾層樣式 */
-        details.work-accordion {
-            background: #fafafa;
-            border: 1px solid #dcdfe6;
-            border-radius: 6px;
-            margin-top: 15px;
-            padding: 10px 15px;
-        }
-        details.work-accordion summary {
-            font-weight: bold;
-            color: #2c3e50;
-            cursor: pointer;
-            padding: 5px 0;
-        }
-        .work-content {
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dashed #ccc;
-            background: #ffffff;
-            padding: 15px;
-            border-radius: 4px;
-        }
-        .work-content h3 { margin-top: 0; color: #2c3e50; }
-        .work-content h4 { color: #3498db; margin-bottom: 5px; }
-    </style>
+    /* 內層作業摺疊卡片 */
+    .sub-details {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .sub-details summary {
+      padding: 14px 18px;
+      font-weight: bold;
+      color: #2d3748;
+      cursor: pointer;
+      user-select: none;
+      background-color: #f7fafc;
+      transition: background-color 0.2s;
+    }
+    .sub-details summary:hover {
+      background-color: #edf2f7;
+    }
+    .sub-details-content {
+      padding: 16px;
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    /* 表格樣式 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #e2e8f0;
+      text-align: left;
+    }
+    th {
+      background-color: #edf2f7;
+      color: #2d3748;
+    }
+    .code-badge {
+      background: #edf2f7;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      color: #3182ce;
+      text-decoration: none;
+    }
+    .code-badge:hover {
+      text-decoration: underline;
+    }
+
+    /* iFrame 內容預覽 */
+    iframe {
+      width: 100%;
+      height: 420px;
+      border: 1px solid #cbd5e0;
+      border-radius: 6px;
+    }
+
+    /* 區塊標題 */
+    .section-title {
+      font-size: 1.5rem;
+      color: #3182ce;
+      margin-top: 36px;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 8px;
+    }
+
+    /* Grid 卡片佈局 (最底部重點專案區) */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      color: #2d3748;
+      margin-bottom: 8px;
+    }
+    .card p {
+      color: #718096;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+    .tags {
+      margin-bottom: 16px;
+    }
+    .tag {
+      display: inline-block;
+      background: #ebf8ff;
+      color: #2b6cb0;
+      font-size: 0.8rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #3182ce;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-align: center;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background-color: #2b6cb0;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- 返回首頁連結 -->
-    <a href="index.html" class="back-btn">← 返回作品集首頁</a>
+  <div class="container">
+    <header>
+      <a href="index.html" class="back-link">← 返回個人主頁</a>
+      <h1>數位科技概論作業總覽</h1>
+      <p>學號：11517007｜展示本學期網頁前端開發作業與專案成果</p>
+    </header>
 
-    <div class="container">
-        <h1>《數位科技概論》第二週教學講義與活動總覽</h1>
-        <p>本週課程包含 9 個核心學習活動，涵蓋 GitHub 操作、HTML 結構化與 CSS 網頁佈局設計。</p>
-
-        <h2>活動學習主題明細</h2>
-        <table class="detail-table">
+    <!-- 1. 活動學習主題明細 (摺疊卡片 1) -->
+    <div class="main-collapse-card">
+      <details>
+        <summary>📌 活動學習主題明細 (點擊展開/收合 9 大作業明細表)</summary>
+        <div class="main-collapse-content" style="overflow-x: auto;">
+          <table>
             <thead>
-                <tr>
-                    <th>活動主題</th>
-                    <th>核心檔案</th>
-                    <th>學習重點與技巧</th>
-                </tr>
+              <tr>
+                <th>活動主題</th>
+                <th>核心檔案</th>
+                <th>學習重點與技巧</th>
+              </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><strong>01：把小站變成我的（水與生活）</strong></td>
-                    <td><a href="01-html-11517007.html" class="activity-tag">01-html-11517007.html</a></td>
-                    <td>HTML 文字層級 (`&lt;h1&gt;`–`&lt;h3&gt;`) 與標籤屬性 (`&lt;b&gt;`, `&lt;i&gt;`, `&lt;sub&gt;`, `&lt;sup&gt;`)</td>
-                </tr>
-                <tr>
-                    <td><strong>02：讓小站有聲有影（校園自然觀察）</strong></td>
-                    <td><a href="02-html-media-11517007.html" class="activity-tag">02-html-media-11517007.html</a></td>
-                    <td>多媒體元素 (`&lt;img&gt;`, `&lt;audio&gt;`, `&lt;video&gt;`) 與圖片 `alt` 設定</td>
-                </tr>
-                <tr>
-                    <td><strong>03：整理我的學習計畫（紙橋挑戰社）</strong></td>
-                    <td><a href="03-html-plan-11517007.html" class="activity-tag">03-html-plan-11517007.html</a></td>
-                    <td>清單 (`&lt;ul&gt;`/`&lt;ol&gt;`) 與表格結構 (`&lt;table&gt;`, `&lt;tr&gt;`, `&lt;td&gt;`)</td>
-                </tr>
-                <tr>
-                    <td><strong>04：設計一張活動報名表</strong></td>
-                    <td><a href="04-html-form-11517007.html" class="activity-tag">04-html-form-11517007.html</a></td>
-                    <td>表單元件 (`&lt;input&gt;`, `&lt;select&gt;`, `&lt;textarea&gt;`) 與 `label` 關聯</td>
-                </tr>
-                <tr>
-                    <td><strong>05：換一種風格</strong></td>
-                    <td>
-                        <a href="05-css-style-11517007.html" class="activity-tag">05-css-style-11517007.html</a><br>
-                        <a href="05-color-lab-11517007.html" class="activity-tag" style="margin-top: 4px; display: inline-block;">05-color-lab-11517007.html</a>
-                    </td>
-                    <td>CSS 色彩、Box Model 內外距 (`padding`/`margin`) 設定與色彩實驗室應用</td>
-                </tr>
-                <tr>
-                    <td><strong>06：網頁版型佈局</strong></td>
-                    <td><span class="activity-tag">06-css-layout.html</span></td>
-                    <td>網頁多欄位佈局與 CSS Grid 基本應用</td>
-                </tr>
-                <tr>
-                    <td><strong>07：把內容排得整齊</strong></td>
-                    <td><span class="activity-tag">07-css-cards.html</span></td>
-                    <td>Flexbox 卡片排列與 `object-fit` 圖片裁切</td>
-                </tr>
-                <tr>
-                    <td><strong>08：從電腦版變成手機版</strong></td>
-                    <td><span class="activity-tag">08-css-rwd.html</span></td>
-                    <td>響應式網頁設計 (RWD) 與 `@media` 媒體查詢</td>
-                </tr>
-                <tr>
-                    <td><strong>09：修正無障礙機檢</strong></td>
-                    <td><span class="activity-tag">09-css-accessibility.html</span></td>
-                    <td>WAVE 無障礙檢測、高色彩對比度與 `:focus-visible` 鍵盤焦點</td>
-                </tr>
+              <tr>
+                <td><strong>01：把小站變成我的 (水與生活)</strong></td>
+                <td><a href="01-html-11517007.html" class="code-badge">01-html-11517007.html</a></td>
+                <td>HTML 文字層級 (<code>&lt;h1&gt;</code>~<code>&lt;h3&gt;</code>) 與標籤屬性 (<code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code>)</td>
+              </tr>
+              <tr>
+                <td><strong>02：讓小站有聲有影 (校園自然觀察)</strong></td>
+                <td><a href="02-html-media-11517007.html" class="code-badge">02-html-media-11517007.html</a></td>
+                <td>多媒體元素 (<code>&lt;img&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>) 與圖片 <code>alt</code> 設定</td>
+              </tr>
+              <tr>
+                <td><strong>03：整理我的學習計畫 (紙橋挑戰社)</strong></td>
+                <td><a href="03-html-plan-11517007.html" class="code-badge">03-html-plan-11517007.html</a></td>
+                <td>清單 (<code>&lt;ul&gt;</code> / <code>&lt;ol&gt;</code>) 與表格結構 (<code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>)</td>
+              </tr>
+              <tr>
+                <td><strong>04：設計一張活動報名表</strong></td>
+                <td><a href="04-html-form-11517007.html" class="code-badge">04-html-form-11517007.html</a></td>
+                <td>表單元件 (<code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>) 與 <code>label</code> 關聯</td>
+              </tr>
+              <tr>
+                <td><strong>05：換一種風格</strong></td>
+                <td>
+                  <a href="05-css-style-11517007.html" class="code-badge" style="display:inline-block; margin-bottom:4px;">05-css-style-11517007.html</a><br>
+                  <a href="05-color-lab-11517007.html" class="code-badge">05-color-lab-11517007.html</a>
+                </td>
+                <td>CSS 色彩、Box Model 內外距 (<code>padding</code>/<code>margin</code>) 設定與色彩實驗室應用</td>
+              </tr>
+              <tr>
+                <td><strong>06：網頁版型佈局</strong></td>
+                <td><a href="06-css-layout-11517007.html" class="code-badge">06-css-layout-11517007.html</a></td>
+                <td>網頁多欄位佈局與 CSS Grid 基本應用</td>
+              </tr>
+              <tr>
+                <td><strong>07：把內容排得整齊</strong></td>
+                <td><span style="color:#718096; font-family:monospace;">07-css-cards.html</span></td>
+                <td>Flexbox 卡片排列與 <code>object-fit</code> 圖片裁切</td>
+              </tr>
+              <tr>
+                <td><strong>08：從電腦版變成手機版</strong></td>
+                <td><span style="color:#718096; font-family:monospace;">08-css-rwd.html</span></td>
+                <td>響應式網頁設計 (RWD) 與 <code>@media</code> 媒體查詢</td>
+              </tr>
+              <tr>
+                <td><strong>09：修正無障礙機檢</strong></td>
+                <td><span style="color:#718096; font-family:monospace;">09-css-accessibility.html</span></td>
+                <td>WAVE 無障礙檢測、高色彩對比度與 <code>:focus-visible</code> 鍵盤焦點</td>
+              </tr>
             </tbody>
-        </table>
-
-        <!-- 作業內容預覽與夾層展覽區 -->
-        <h2>作業內容預覽</h2>
-
-        <!-- 作業 01 夾層 -->
-        <details class="work-accordion">
-            <summary>📁 作業 01：水與生活：小小科學探索日（點擊展開/收合）</summary>
-            <div class="work-content">
-                <h3>水與生活：小小科學探索日</h3>
-                <p>一起從生活中的水，發現科學的有趣之處。</p>
-            </div>
-        </details>
-
-        <!-- 作業 02 夾層 -->
-        <details class="work-accordion">
-            <summary>📁 作業 02：校園自然觀察任務卡（點擊展開/收合）</summary>
-            <div class="work-content">
-                <h3>校園自然觀察任務卡</h3>
-                <p>今天我們用眼睛觀察，也用文字記錄發現。</p>
-            </div>
-        </details>
-
-        <!-- 作業 03 夾層 -->
-        <details class="work-accordion">
-            <summary>📁 作業 03：紙橋挑戰社：活動準備頁（點擊展開/收合）</summary>
-            <div class="work-content">
-                <h3>紙橋挑戰社：活動準備頁</h3>
-                <p>我們要用簡單的材料，設計一座能承重的紙橋。</p>
-            </div>
-        </details>
-
-        <!-- 作業 04 夾層 -->
-        <details class="work-accordion">
-            <summary>📁 作業 04：放學後社團體驗表（點擊展開/收合）</summary>
-            <div class="work-content">
-                <h3>放學後社團體驗表</h3>
-                <p>這是介面練習，資料不會送出或保存，不能當成正式報名。</p>
-            </div>
-        </details>
-
-        <!-- 作業 05 夾層 -->
-        <details class="work-accordion" open>
-            <summary>📁 作業 05：換一種風格 (CSS 基礎練習)（點擊展開/收合）</summary>
-            <div class="work-content">
-                <h3>活動 05：換一種風格 & 色彩實驗室</h3>
-                <p><strong>調整重點：</strong></p>
-                <ul>
-                    <li>標題文字加大至 30px，顏色調整為紫色系 (`#704B78`)[cite: 21, 22]。</li>
-                    <li>重點文字套用指定藍綠色 (`#17596E`)[cite: 21, 22]。</li>
-                    <li>卡片放大內距 (`padding: 32px`)、外距 (`margin: 40px 0`)、圓角 (`20px`) 與加粗邊框 (`4px`)[cite: 21, 22]。</li>
-                    <li>段落內文字級加大至 18px，行高拉開至 1.8倍以利閱讀[cite: 21, 22]。</li>
-                </ul>
-                <p>
-                    <a href="05-css-style-11517007.html" class="activity-tag">開啟修改後的練習頁</a>
-                    <a href="05-color-lab-11517007.html" class="activity-tag">開啟色彩實驗室</a>
-                </p>
-            </div>
-        </details>
-
-        <h2>作業打包與繳交規範</h2>
-        <ul>
-            <li><strong>HTML 單獨作業 (01, 03, 04)：</strong>繳交單一 HTML 檔 (`0X-html-xxx-學號.html`)[cite: 23]。</li>
-            <li><strong>多媒體作業 (02)：</strong>需連同 <span class="activity-tag">media-02</span> 資料夾打包為 ZIP (`02-html-media-學號.zip`)[cite: 23]。</li>
-            <li><strong>CSS 作業 (05–09)：</strong>包含活動 05 的練習檔與色彩實驗室，打包為 <span class="activity-tag">CSS-05-11517007.zip</span>[cite: 23]。</li>
-        </ul>
+          </table>
+        </div>
+      </details>
     </div>
+
+    <!-- 2. 作業內容預覽 (摺疊卡片 2) -->
+    <div class="main-collapse-card">
+      <details>
+        <summary>📁 作業內容預覽 (點擊展開/收合作業 01~05 獨立預覽)</summary>
+        <div class="main-collapse-content">
+          
+          <details class="sub-details">
+            <summary>📁 作業 01：水與生活：小小科學探索日 (點擊展開/收合)</summary>
+            <div class="sub-details-content">
+              <iframe src="01-html-11517007.html" title="作業 01 預覽"></iframe>
+            </div>
+          </details>
+
+          <details class="sub-details">
+            <summary>📁 作業 02：校園自然觀察任務卡 (點擊展開/收合)</summary>
+            <div class="sub-details-content">
+              <iframe src="02-html-media-11517007.html" title="作業 02 預覽"></iframe>
+            </div>
+          </details>
+
+          <details class="sub-details">
+            <summary>📁 作業 03：紙橋挑戰社：活動準備頁 (點擊展開/收合)</summary>
+            <div class="sub-details-content">
+              <iframe src="03-html-plan-11517007.html" title="作業 03 預覽"></iframe>
+            </div>
+          </details>
+
+          <details class="sub-details">
+            <summary>📁 作業 04：放學後社團體驗表 (點擊展開/收合)</summary>
+            <div class="sub-details-content">
+              <iframe src="04-html-form-11517007.html" title="作業 04 預覽"></iframe>
+            </div>
+          </details>
+
+          <details class="sub-details">
+            <summary>📁 作業 05：換一種風格 (CSS 基礎練習) (點擊展開/收合)</summary>
+            <div class="sub-details-content">
+              <iframe src="05-css-style-11517007.html" title="作業 05 預覽"></iframe>
+            </div>
+          </details>
+
+        </div>
+      </details>
+    </div>
+
+    <!-- 3. 幾A幾B 數字猜測遊戲 (摺疊卡片 3) -->
+    <div class="main-collapse-card">
+      <details>
+        <summary>🎮 幾 A 幾 B 數字猜測遊戲：四階段雲端演進專案 (點擊展開/收合)</summary>
+        <div class="main-collapse-content" style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>階段版本</th>
+                <th>專案名稱 / 描述</th>
+                <th>學習重點與架構</th>
+                <th>線上體驗連結</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>版本一 (AB V1)</strong></td>
+                <td>基本幾 A 幾 B 遊戲</td>
+                <td>4 位不重複數字判斷 (含除錯模式切換)</td>
+                <td><a href="https://u11517007.github.io/abv1/" target="_blank" rel="noopener noreferrer" class="code-badge">前往體驗 (V1) ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>版本二 (AB V2)</strong></td>
+                <td>幾 A 幾 B 多局歷史紀錄</td>
+                <td>多局紀錄保留、中途換局與歷史數據查看</td>
+                <td><a href="https://u11517007.github.io/abv2/" target="_blank" rel="noopener noreferrer" class="code-badge">前往體驗 (V2) ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>版本三 (AB V3)</strong></td>
+                <td>代號與 GAS 雲端存檔</td>
+                <td>代號查詢、GAS (Google Apps Script) 雲端續玩寫入</td>
+                <td><a href="https://u11517007.github.io/abv3/" target="_blank" rel="noopener noreferrer" class="code-badge">前往體驗 (V3) ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>版本四 (AB V4)</strong></td>
+                <td>Google 帳號個人雲端存檔</td>
+                <td>OAuth 帳號授權、玩家專用個人 Google 試算表同步存檔</td>
+                <td><a href="https://u11517007.github.io/abv4/" target="_blank" rel="noopener noreferrer" class="code-badge">前往體驗 (V4) ↗</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </div>
+
+    <!-- 4. 重點專案卡片 (最底部) -->
+    <h2 class="section-title">重點專案與展示</h2>
+    <div class="projects-grid">
+      
+      <!-- 英打學習軟體 -->
+      <div class="card">
+        <div>
+          <h3>英打學習軟體</h3>
+          <p>核心重點作品：互動式英文打字學習工具，提供實時打字練習與技能提升功能。</p>
+          <div class="tags">
+            <span class="tag">Web App</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">互動學習</span>
+          </div>
+        </div>
+        <div>
+          <a href="https://u11517007.github.io/typing2/" target="_blank" rel="noopener noreferrer" class="btn">開啟學習軟體 ↗</a>
+        </div>
+      </div>
+
+      <!-- 英打開發歷程練習 -->
+      <div class="card">
+        <div>
+          <h3>英打開發歷程練習</h3>
+          <p>結合打字練習與開發歷程紀錄的 Web 應用程式，協助追蹤練習軌跡並提升打字速度。</p>
+          <div class="tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <div>
+          <a href="https://u11517007.github.io/typing-history/" target="_blank" rel="noopener noreferrer" class="btn">開啟練習網頁 ↗</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 
 </body>
 </html>
